@@ -9,7 +9,7 @@ def display_all_students():
         print("{}. {} Credits: {}".format(index+1, students[index][0], students[index][1] ))    
 
 
-# stores initial student details
+# stores initial student details (note you could start with an empty list but this makes testing easier)
 students = [["Justine Lee",50], ["Bryn Lewis",20], ["Meredith Lewis",10], ["Rhys Lewis",5],["Phil Adams",100]]
 
 
