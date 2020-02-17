@@ -4,11 +4,12 @@
 
 # display all students in a list
 def display_all_students():
+    print("\nLIST OF STUDENTS")
     for index in range(0, len(students)):
-        print("{}. Name: {}".format(index+1, students[index]))    
+        print("{}. {} Credits: {}".format(index+1, students[index][0], students[index][1] ))    
 
 
-# stores student details
+# stores initial student details
 students = [["Justine Lee",50], ["Bryn Lewis",20], ["Meredith Lewis",10], ["Rhys Lewis",5],["Phil Adams",100]]
 
 
@@ -17,14 +18,15 @@ students = [["Justine Lee",50], ["Bryn Lewis",20], ["Meredith Lewis",10], ["Rhys
 display_menu = True
 
 while display_menu == True :
+    print("\n=====MENU=====")
     print("1. Display all students")
     print("2. Add a student")
     print("3. Delete a student")
     print("4. Update a student")
-    print("5. Quit program")
+    print("5. Quit program\n")
     
     # get selected menu option
-    choice = int(input("Please choose a menu option"))
+    choice = int(input("Please choose a menu option: "))
     
     # display all student
     if choice == 1:
@@ -34,7 +36,7 @@ while display_menu == True :
     elif choice == 2:
         # add a student
         student_name = input("Enter the name of a student: ")
-        student_credit_total = int(input("Enter total NCEA level 1 credits"))
+        student_credit_total = int(input("Enter total NCEA level 1 credits: "))
         
         new_student = [student_name, student_credit_total]
         
@@ -65,17 +67,4 @@ while display_menu == True :
         
 print("Bye")
         
-              
-        
 
-    
-
-
-    
-
-
-    
-
-
-
-display_all_students()
