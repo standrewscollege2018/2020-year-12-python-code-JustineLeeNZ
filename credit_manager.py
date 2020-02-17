@@ -13,10 +13,11 @@ def display_all_students():
 students = [["Justine Lee",50], ["Bryn Lewis",20], ["Meredith Lewis",10], ["Rhys Lewis",5],["Phil Adams",100]]
 
 
-# use loop to display menu until user decides to quit
 
+# menu will keep displaying while this variable is True
 display_menu = True
 
+# display menu until user decides to quit
 while display_menu == True :
     print("\n=====MENU=====")
     print("1. Display all students")
@@ -25,8 +26,25 @@ while display_menu == True :
     print("4. Update a student")
     print("5. Quit program\n")
     
-    # get selected menu option
-    choice = int(input("Please choose a menu option: "))
+    # get selected menu option which should be an integer
+    while True:
+        # check if integer value entered
+        try:
+            # get menu choice
+            choice = int(input("Please choose a menu option: "))
+            break
+        
+        # detect integer value not entered
+        except:
+            # display error message
+            print("Error: invalid input - it must be an integer")
+            # redisplay menu so that user can see what options are
+            print("\n=====MENU=====")
+            print("1. Display all students")
+            print("2. Add a student")
+            print("3. Delete a student")
+            print("4. Update a student")
+            print("5. Quit program\n")            
     
     # display all student
     if choice == 1:
@@ -61,8 +79,12 @@ while display_menu == True :
         students[student_num-1][1] = new_total
         
     # exit program
-    else:
+    elif choice ==5 :
         display_menu = False
+        
+    # capture invalid menu option
+    else:
+        print("invalid menu choice")
         
         
 print("Bye")
