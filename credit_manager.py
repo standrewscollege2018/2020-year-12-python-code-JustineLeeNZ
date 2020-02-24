@@ -1,16 +1,16 @@
-''' manage student info about L1 NCEA credits '''
-# Ms Lee
-# 11/2/2020
+""" Manage student info about L1 NCEA credits - Ms Lee. """
 
-# display all students in a list
+
 def display_all_students():
+    """ Display all students in a list. """
     print("\nLIST OF STUDENTS")
     for index in range(0, len(students)):
         print("{}. {} Credits: {}".format(index+1, students[index][0], students[index][1] ))    
 
 
 # stores initial student details (note you could start with an empty list but this makes testing easier)
-students = [["Justine Lee",50], ["Bryn Lewis",20], ["Meredith Lewis",10], ["Rhys Lewis",5],["Phil Adams",100]]
+students = [["Justine Lee",50], ["Bryn Lewis",20], ["Meredith Lewis",10], ["Rhys Lewis",5],["Phil Adams",100],["Wilj Dekkers",3]]
+#students = []
 
 
 
